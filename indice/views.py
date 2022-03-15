@@ -26,7 +26,6 @@ def mi_plantilla(request):
     
     nombre = 'Jorgelina'
     apellido = 'Atahualpa'
-    
     lista = [3,1,2,45,1,2,3]
     
     diccionario_de_datos = {
@@ -42,12 +41,11 @@ def mi_plantilla(request):
     # plantilla.close()
     # context = Context(diccionario_de_datos)
     # plantilla_preparada = template.render(diccionario_de_datos)
-    
-    
+
     # version nueva con loader
-    #template = loader.get_template("mi_plantilla.html")
-    #plantilla_preparada = template.render(diccionario_de_datos)
+    # template = loader.get_template("mi_plantilla.html")
+    # plantilla_preparada = template.render(diccionario_de_datos)
+    # return HttpResponse(plantilla_preparada)
     
-    #return HttpResponse(plantilla_preparada)
-    
+    # version con render
     return render(request, "indice/mi_plantilla.html", diccionario_de_datos)
